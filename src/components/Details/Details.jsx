@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useLocation, NavLink, Outlet } from "react-router-dom";
 import { Api } from "Services/Api";
+import notImages from '../../Image/unnamed.png'
 import CSS from './Details.module.css'
 
 const api = new Api();
@@ -14,7 +15,8 @@ const Details = () => {
         try {
             api.fetchDetails(movieId).then(data => {
                 data.poster_path
-                    && (data.poster_path = `https://www.themoviedb.org/t/p/w440_and_h660_face/${data.poster_path}`)
+                    ? (data.poster_path = `https://www.themoviedb.org/t/p/w440_and_h660_face/${data.poster_path}`)
+                    : (data.poster_path = notImages);
                 setMovie(data);
             });
         } catch (error) {
