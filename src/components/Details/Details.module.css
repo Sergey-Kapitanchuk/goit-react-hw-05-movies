@@ -1,0 +1,16 @@
+.details{
+    display: flex;
+    margin-top: 20px;
+    padding-left: 15px;
+
+}
+
+.img{
+    margin-right: 20px;
+    width: 350px;
+}
+
+.detailsList{
+    width: 400px;
+    list-style: none;
+}

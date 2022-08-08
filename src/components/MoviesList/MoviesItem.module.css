@@ -1,0 +1,15 @@
+li{
+    margin-right: 15px;
+    margin-top: 15px;
+    width: 200px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+img{
+    width: 180px;
+}
+
+h4{
+    margin-top: 5px;
+}
